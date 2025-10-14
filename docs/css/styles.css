@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	/* Layout */
+	.margens {
+		@apply px-4 py-1.5;
+	}
+	/* Header*/
+	header {
+		@apply bg-slate-900 flex flex-row justify-between items-center px-4 py-1.5;
+	}
+	.nav-header {
+		@apply flex flex-row gap-3 px-1.5 justify-between items-center;
+	}
+    /* botao */
+	.btn {
+		@apply text-white bg-rose-600 font-medium rounded-full text-sm px-4 py-1.5 text-center;
+	}
+    .btn:hover {
+        @apply bg-rose-700;
+    }
+    .btn-nav {
+        @apply text-white 
+    }
+	.logo {
+		@apply w-12 h-12 px-1.5 py-1;
+	}
+}
+
+.font-bebas {
+	font-family: 'Bebas Neue', cursive;
+}
+.font-inter {
+	font-family: 'Inter', sans-serif;
+}
+.font-poppins {
+	font-family: 'Poppins', sans-serif;
+}
