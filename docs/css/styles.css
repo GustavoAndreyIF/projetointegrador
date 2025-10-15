@@ -16,27 +16,48 @@
 	.nav-header {
 		@apply flex flex-row gap-3 px-1.5 justify-between items-center;
 	}
-    /* botao */
+	/* botao */
 	.btn {
-		@apply text-white bg-rose-600 font-medium rounded-full text-sm px-4 py-1.5 text-center;
+		@apply text-white bg-rose-600 font-medium rounded-full text-sm px-4 py-1.5 text-center inline-flex items-center gap-1;
 	}
-    .btn:hover {
-        @apply bg-rose-700;
-    }
-    .btn-nav {
-        @apply text-white 
-    }
+	.btn:hover {
+		@apply bg-rose-700;
+	}
+	.btn-nav {
+		@apply text-white;
+	}
 	.logo {
 		@apply w-12 h-12 px-1.5 py-1;
+	}
+	/* Section Introdução */
+	.introducao {
+		@apply bg-[url('../images/backgrounds/background_1.jpg')] bg-cover bg-center gap-8;
+	}
+	.intro-text-subtitle {
+		@apply text-white text-sm text-shadow-sm;
+		font-family: "Poppins", sans-serif;
+	}
+	.intro-text-title {
+		@apply text-white text-4xl text-shadow-lg/30;
+		font-family: "Bebas Neue", cursive;
+	}
+
+	.intro-card {
+		@apply bg-slate-900/30 rounded-lg p-2.5 gap-3 w-10/12 flex flex-row items-start;
+	}
+
+	.text-body {
+		@apply text-white text-base;
+		font-family: "Inter", sans-serif;
 	}
 }
 
 .font-bebas {
-	font-family: 'Bebas Neue', cursive;
+	font-family: "Bebas Neue", cursive;
 }
 .font-inter {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 .font-poppins {
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 }
