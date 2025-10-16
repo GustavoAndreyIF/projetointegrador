@@ -21,13 +21,28 @@
 		@apply text-white bg-rose-600 font-medium rounded-full text-sm px-4 py-1.5 text-center inline-flex items-center gap-1;
 	}
 	.btn:hover {
-		@apply bg-rose-700;
+		@apply transition-all delay-100 duration-100 bg-rose-700;
 	}
 	.btn-nav {
 		@apply text-white;
 	}
+	.btn-outline {
+		@apply text-rose-600 border-2 border-rose-600 bg-none font-semibold rounded-full text-sm px-4 py-1.5 text-center inline-flex items-center gap-1;
+	}
+	.btn-outline:hover {
+		@apply transition-all delay-100 duration-100 text-white bg-rose-600 font-medium rounded-full text-sm px-4 py-1.5 text-center inline-flex items-center gap-1;
+	}
+	/*Logo e Icons*/
 	.logo {
 		@apply w-12 h-12 px-1.5 py-1;
+	}
+
+	.icon-6 {
+		@apply w-6 h-6
+	}
+
+	.icon-8 {
+		@apply w-8 h-8
 	}
 	/* Section Introdução */
 	.introducao {
@@ -42,10 +57,25 @@
 		font-family: "Bebas Neue", cursive;
 	}
 
-	.intro-card {
-		@apply bg-slate-900/30 rounded-lg p-2.5 gap-3 w-10/12 flex flex-row items-start;
+	/* Section conteudo */
+	.section-title {
+		@apply text-white text-3xl;
+		font-family: "Bebas Neue", cursive;
+	}
+	/* Card */
+	.card-intro {
+		@apply bg-slate-900/30 rounded-lg p-2.5 gap-3 flex flex-row items-start;
 	}
 
+	.card {
+		@apply bg-slate-900/30 rounded-lg p-2.5 gap-3 flex flex-col;
+	}
+
+	.card-title {
+		@apply text-white text-3xl;
+		font-family: "Bebas Neue", cursive;
+	}
+	/* Texto */
 	.text-body {
 		@apply text-white text-base;
 		font-family: "Inter", sans-serif;
