@@ -6,7 +6,7 @@
 
 @layer components {
 	/* Layout */
-	.margens {
+	.section-spacing {
 		@apply px-4 py-1.5;
 	}
 	/* Header*/
@@ -38,11 +38,11 @@
 	}
 
 	.icon-6 {
-		@apply w-6 h-6
+		@apply w-6 h-6;
 	}
 
 	.icon-8 {
-		@apply w-8 h-8
+		@apply w-8 h-8;
 	}
 	/* Section Introdução */
 	.introducao {
@@ -59,7 +59,7 @@
 
 	/* Section conteudo */
 	.section-title {
-		@apply text-white text-3xl;
+		@apply text-white text-3xl pt-1 py-4 flex flex-row justify-center;
 		font-family: "Bebas Neue", cursive;
 	}
 	/* Card */
@@ -68,19 +68,47 @@
 	}
 
 	.card {
-		@apply bg-slate-900/30 rounded-lg p-2.5 gap-3 flex flex-col;
+		@apply bg-slate-900/30 rounded-lg p-4 leading-normal flex flex-col;
 	}
 
 	.card-title {
-		@apply text-white text-3xl;
-		font-family: "Bebas Neue", cursive;
+		@apply text-white text-2xl font-semibold tracking-tight;
+		font-family: "Inter", sans-serif;
+	}
+
+	.card-image {
+		@apply h-64 w-full rounded-lg object-cover;
 	}
 	/* Texto */
 	.text-body {
-		@apply text-white text-base;
+		@apply text-slate-200 text-base;
 		font-family: "Inter", sans-serif;
 	}
+
+	/* Layout */
+	.container-card {
+		@apply flex flex-col items-center bg-slate-900 rounded-lg;
+	}
+
+	/*Scroll carousel*/
+	.scroll-container {
+		@apply overflow-x-auto overflow-y-hidden;
+	}
+
+	.scroll-card-container {
+		@apply relative flex flex-col items-center justify-end h-64 w-64 rounded-lg object-cover flex-shrink-0 transition-all;
+	}
+	
+	.scroll-card-container::before {
+		content: '';
+		@apply absolute inset-0 rounded-lg bg-gradient-to-t from-slate-900/90 to-transparent;
+	}
+	
+	.scroll-card-container > * {
+		@apply relative z-10;
+	}
 }
+
 
 .font-bebas {
 	font-family: "Bebas Neue", cursive;
