@@ -15,93 +15,102 @@
 
 		<title>Projeto Integrador</title>
 	</head>
-	<body class="bg-slate-800">
+	<body>
 		<header class="section-spacing">
 			<a href="/docs/index.html"><img src="images/logo.svg" class="logo" /></a>
-			<nav class="nav-header">
-				<a href="/docs/index.html" class="btn-nav font-inter">Inicio</a>
-				<a href="/docs/html/wiki" class="btn-nav font-inter">Artigo</a>
-				<a href="/docs/html/gallery" class="btn-nav font-inter">Galeria</a>
-				<a href="https://github.com/GustavoAndreyIF/projetointegrador" class="btn">Github</a>
+			<nav>
+				<a href="/docs/index.html" class="btn-nav">Inicio</a>
+				<a href="/docs/html/wiki" class="btn-nav">Artigo</a>
+				<a href="/docs/html/gallery" class="btn-nav">Galeria</a>
+				<a
+					href="https://github.com/GustavoAndreyIF/projetointegrador"
+					class="btn"
+					>Github</a
+				>
 			</nav>
 		</header>
-		<main class="">
-			<section class="flex flex-col gap-7 introducao section-spacing">
+		<main>
+			<section class="section-intro section-spacing">
 				<div class="flex flex-col gap-3">
-					<h2 class="intro-text-subtitle">
+					<h2 class="section-intro-subtitle">
 						Descubra o segredo por trás do sangue
 					</h2>
-					<h1 class="intro-text-title">
+					<h1 class="section-intro-title">
 						Hemácias: o transporte
 						<span class="text-rose-600">vital</span> de oxigênio que
 						sustenta a <span class="text-rose-600">vida</span>
 					</h1>
 				</div>
-				<div class="flex flex-col gap-3.5">
-					<div class="card-intro w-10/12">
-						<img class="icon-6" src="images/icons/info_white.svg" />
-						<p class="text-body">
+				<div class="flex flex-col gap-5">
+					<div class="section-card-intro">
+						<img src="images/icons/info_white.svg" />
+						<p>
 							As hemácias são células do sangue responsáveis por levar
 							oxigênio a todo o corpo e garantir que cada órgão funcione
-							corretamente sem problemas.
+							corretamente.
 						</p>
 					</div>
 					<div>
-						<a href="#" class="btn pr-1.5"
-							>Continue lendo
+						<button href="#" class="btn" type="button">
+							<p class="btn-left">Continue lendo</p>
 							<img
-								class="icon-6"
+								class="btn-left"
 								src="images/icons/keyboard_arrow_right.svg"
-						/></a>
+							/>
+						</button>
 					</div>
 				</div>
 			</section>
-			<section class="section-spacing pt-8">
+			<section class="section-spacing">
 				<div class="section-title">
-					<h2>Sobre Hemácias</h2>
+					<h3>Sobre Hemácias</h3>
 				</div>
-				<div class="container-card">
+				<div class="card-container">
 					<div class="card">
-						<div class="flex flex-row gap-2">
-							<img class="icon-8" src="images/icons/info_white.svg" />
-							<h3 class="card-title">Titulo do Card da Sessão</h3>
+						<div>
+							<img src="images/icons/info_white.svg" />
+							<h4>Titulo do Card da Sessão</h4>
 						</div>
-						<div class="">
-							<p class="text-body">
-								Texto Texto Texto Texto Texto Texto Texto Texto Texto
-								Texto Texto Texto Texto Texto Texto Texto Texto Texto
-								Texto Texto Texto Texto Texto Texto Texto
+						<p>
+							Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+							Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+							Texto Texto Texto Texto
+						</p>
+					</div>
+				</div>
+				<div class="flex flex-row pt-4 justify-center">
+					<button href="#" class="btn-outline" type="button">
+						<img
+							class="btn-right"
+							src="images/icons/keyboard_arrow_right.svg"
+						/>
+						<p class="btn-right">Saiba mais</p>
+					</button>
+				</div>
+			</section>
+			<section>
+				<div class="section-spacing section-title">
+					<h3>Formação das Hemácias</h3>
+				</div>
+				<div class="scroll-container">
+					<div
+						class="scroll-card bg-cover bg-center bg-[url('/docs/images/Placeholder.png')]"
+					>
+						<h5>Card</h5>
+					</div>
+				</div>
+			</section>
+			<section class="section-spacing">
+				<div class="card-container">
+					<div>
+						<img class="card-image" src="/docs/images/Placeholder.png" />
+						<div class="card">
+							<h4>Titulo do Card Image text</h4>
+							<p>
+								texto texto texto texto texto texto texto texto texto
+								texto
 							</p>
 						</div>
-					</div>
-				</div>
-				<div class="flex flex-row pt-4 justify-center items-center">
-					<a href="#" class="btn-outline">
-						<img class="icon-6 pl-1.5" src="images/icons/info_white.svg" />
-						Saiba mais</a
-					>
-				</div>
-			</section>
-			<section class="section-spacing pt-8">
-				<div class="section-title">
-					<h2>Formação das Hemácias</h2>
-				</div>
-				<div class="scroll-container flex flex-nowrap gap-4 pb-4">
-					<div
-						class="scroll-card-container bg-cover bg-center bg-[url('/docs/images/Placeholder.png')]"
-					>
-						<h5 class="card-title text-center pb-6">Card</h5>
-					</div>
-				</div>
-			</section>
-			<section class="section-spacing pt-8">
-				<div class="card-container">
-					<img class="card-image" src="/docs/images/Placeholder.png" />
-					<div class="card">
-						<h5 class="card-title">Titulo do Card Image text</h5>
-						<p class="text-body">
-							texto texto texto texto texto texto texto texto texto texto
-						</p>
 					</div>
 				</div>
 			</section>

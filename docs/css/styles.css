@@ -4,118 +4,158 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-	/* Layout */
-	.section-spacing {
-		@apply px-4 py-1.5;
+@layer base {
+	body {
+		@apply bg-slate-800;
 	}
-	/* Header*/
 	header {
-		@apply bg-slate-900 flex flex-row justify-between items-center px-4 py-1.5;
+		@apply bg-slate-900 flex flex-row justify-between items-center;
 	}
-	.nav-header {
+	nav {
 		@apply flex flex-row gap-3 px-1.5 justify-between items-center;
 	}
-	/* botao */
-	.btn {
-		@apply text-white bg-rose-600 font-medium rounded-full text-sm px-4 py-1.5 text-center inline-flex items-center gap-1;
-	}
-	.btn:hover {
-		@apply transition-all delay-100 duration-100 bg-rose-700;
-	}
-	.btn-nav {
-		@apply text-white;
-	}
-	.btn-outline {
-		@apply text-rose-600 border-2 border-rose-600 bg-none font-semibold rounded-full text-sm px-4 py-1.5 text-center inline-flex items-center gap-1;
-	}
-	.btn-outline:hover {
-		@apply transition-all delay-100 duration-100 text-white bg-rose-600 font-medium rounded-full text-sm px-4 py-1.5 text-center inline-flex items-center gap-1;
-	}
-	/*Logo e Icons*/
-	.logo {
-		@apply w-12 h-12 px-1.5 py-1;
-	}
-
-	.icon-6 {
-		@apply w-6 h-6;
-	}
-
-	.icon-8 {
-		@apply w-8 h-8;
-	}
-	/* Section Introdução */
-	.introducao {
-		@apply bg-[url('../images/backgrounds/background_1.jpg')] bg-cover bg-center gap-8;
-	}
-	.intro-text-subtitle {
-		@apply text-white text-sm text-shadow-sm;
-		font-family: "Poppins", sans-serif;
-	}
-	.intro-text-title {
-		@apply text-white text-4xl text-shadow-lg/30;
-		font-family: "Bebas Neue", cursive;
-	}
-
-	/* Section conteudo */
-	.section-title {
-		@apply text-white text-3xl pt-1 py-4 flex flex-row justify-center;
-		font-family: "Bebas Neue", cursive;
-	}
-	/* Card */
-	.card-intro {
-		@apply bg-slate-900/30 rounded-lg p-2.5 gap-3 flex flex-row items-start;
-	}
-
-	.card {
-		@apply bg-slate-900/30 rounded-lg p-4 leading-normal flex flex-col;
-	}
-
-	.card-title {
-		@apply text-white text-2xl font-semibold tracking-tight;
-		font-family: "Inter", sans-serif;
-	}
-
-	.card-image {
-		@apply h-64 w-full rounded-lg object-cover;
-	}
-	/* Texto */
-	.text-body {
+	p {
 		@apply text-slate-200 text-base;
 		font-family: "Inter", sans-serif;
 	}
+	section {
+		@apply mb-16;
+	}
+	.section-intro {
+		@apply bg-[url('../images/backgrounds/background_1.jpg')] bg-cover bg-center 
+		flex flex-col gap-12;
+	}
+}
 
-	/* Layout */
-	.container-card {
-		@apply flex flex-col items-center bg-slate-900 rounded-lg;
+@layer utilities {
+	.section-spacing {
+		@apply px-4 py-1.5;
+	}
+	.logo {
+		@apply w-12 h-12 px-1.5 py-1;
+	}
+	.section-title {
+		@apply text-white text-4xl pt-1 py-4 flex flex-row justify-center;
+		font-family: "Bebas Neue", cursive;
+	}
+	.section-intro-subtitle {
+		@apply text-white text-sm text-shadow-sm;
+		font-family: "Poppins", sans-serif;
+	}
+	.section-intro-title {
+		@apply text-white text-4xl text-shadow-lg/30;
+		font-family: "Bebas Neue", cursive;
+	}
+	.btn-left {
+		@apply ms-2 me-0;
+	}
+	.btn-right {
+		@apply me-2 ms-0;
+	}
+}
+
+@layer components {
+	/* BOTÕES */
+	.btn {
+		@apply text-white bg-rose-600 font-medium rounded-full text-sm 
+			px-5 py-2 text-center inline-flex items-center shadow-md justify-between
+			transition-all duration-200 ease-in-out cursor-pointer;
+		font-family: "Inter", sans-serif;
+	}
+	.btn img {
+		@apply w-6 h-6 transition-all duration-200 group-hover:translate-x-1;
+	}
+	.btn:focus {
+		@apply outline-none ring-1 ring-rose-400 ring-offset-1;
+	}
+	.btn:hover {
+		@apply bg-rose-700 shadow-lg scale-105;
+	}
+	.btn:disabled {
+		@apply opacity-50 cursor-not-allowed;
+	}
+	.btn-outline {
+		@apply text-rose-600 border-2 border-rose-600 bg-none 
+			font-semibold rounded-full text-sm px-5 py-2 text-center 
+			inline-flex items-center shadow-md justify-between
+			transition-all duration-200 ease-in-out cursor-pointer;
+		font-family: "Inter", sans-serif;
+	}
+	.btn-outline img {
+		@apply w-6 h-6 transition-all duration-200 group-hover:translate-x-1;
+	}
+	.btn-outline:focus {
+		@apply outline-none ring-1 ring-rose-400 ring-offset-1;
+	}
+	.btn-outline:hover {
+		@apply text-white bg-rose-600 shadow-lg scale-105;
+	}
+	.btn-outline:disabled {
+		@apply opacity-50 cursor-not-allowed;
+	}
+	.btn-nav {
+		@apply text-white font-medium text-sm 
+			text-center inline-flex items-center
+			transition-all duration-200 ease-in-out cursor-pointer;
+		font-family: "Inter", sans-serif;
 	}
 
-	/*Scroll carousel*/
+	/* CARDS */
+	.section-card-intro {
+		@apply bg-slate-900/50 rounded-xl p-3 gap-3 flex flex-row items-start w-11/12;
+	}
+	.section-card-intro img {
+		@apply w-6 h-6 mt-0.5;
+	}
+	.section-card-intro p {
+		@apply leading-normal;
+	}
+
+	.card {
+		@apply bg-slate-900/50 rounded-xl p-3 flex flex-col;
+	}
+	.card img {
+		@apply w-8 h-8;
+	}
+	.card div {
+		@apply flex flex-row gap-3 items-center;
+	}
+	.card p {
+		@apply mt-2 leading-normal;
+	}
+	.card h4 {
+		@apply text-white text-2xl font-semibold leading-snug;
+		font-family: "Inter", sans-serif;
+	}
+	.card-container {
+		@apply flex flex-col gap-4
+	}
+	.card-image {
+		@apply h-64 w-full rounded-t-xl object-cover;
+	}
+
+	/*SCROLL CAROUSEL*/
 	.scroll-container {
-		@apply overflow-x-auto overflow-y-hidden;
+		@apply overflow-x-auto overflow-y-hidden flex flex-nowrap gap-4 pb-4 pt-2 px-4 outline-none;
 	}
-
-	.scroll-card-container {
-		@apply relative flex flex-col items-center justify-end h-64 w-64 rounded-lg object-cover flex-shrink-0 transition-all;
+	.scroll-container.cursor-grabbing {
+		cursor: grabbing;
 	}
-	
-	.scroll-card-container::before {
-		content: '';
-		@apply absolute inset-0 rounded-lg bg-gradient-to-t from-slate-900/90 to-transparent;
+	.scroll-card {
+		@apply relative flex flex-col items-center justify-end h-64 w-64 rounded-xl object-cover flex-shrink-0 transition-all duration-300 ease-in-out cursor-pointer;
 	}
-	
-	.scroll-card-container > * {
+	.scroll-card h5 {
+		@apply text-white shadow-md text-center pb-6 text-2xl font-semibold leading-snug;
+		font-family: "Inter", sans-serif;
+	}
+	.scroll-card:hover {
+		@apply scale-100 shadow-md -translate-y-1;
+	}
+	.scroll-card::before {
+		content: "";
+		@apply absolute inset-0 rounded-xl bg-gradient-to-t from-slate-900/90 to-transparent;
+	}
+	.scroll-card > * {
 		@apply relative z-10;
 	}
-}
-
-
-.font-bebas {
-	font-family: "Bebas Neue", cursive;
-}
-.font-inter {
-	font-family: "Inter", sans-serif;
-}
-.font-poppins {
-	font-family: "Poppins", sans-serif;
 }
