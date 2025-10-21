@@ -118,11 +118,12 @@
 	}
 
 	.card {
-		@apply bg-slate-900/50 rounded-xl p-3 flex flex-col transition-all duration-300 ease-in-out shadow-md cursor-pointer;
+		@apply bg-slate-900/50 rounded-xl p-3 flex flex-col transition-all duration-300 ease-in-out shadow-md;
 	}
 	.card-2 {
-		@apply bg-slate-900/50 rounded-xl flex flex-col transition-all duration-300 ease-in-out shadow-md cursor-pointer;
+		@apply bg-slate-900/50 rounded-xl flex flex-col transition-all duration-300 ease-in-out shadow-md;
 	}
+
 	.card:hover,
 	.card:focus,
 	.card-2:hover,
@@ -164,6 +165,9 @@
 
 	.card-2 img {
 		@apply h-64 w-full rounded-t-xl object-cover;
+	}
+	.card-2 video {
+		@apply aspect-video rounded-t-xl object-cover cursor-pointer;
 	}
 
 	/*SCROLL CAROUSEL*/
