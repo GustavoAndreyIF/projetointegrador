@@ -61,6 +61,17 @@
 }
 
 @layer components {
+	.badge-help {
+		@apply flex flex-row text-slate-500 gap-3;
+	}
+	.badge-help svg {
+		@apply w-5 h-5 transition-all duration-200;
+	}
+	.badge-help h6 {
+		@apply text-sm font-medium;
+		font-family: "Inter", sans-serif;
+	}
+
 	/* BOTÕES */
 	.btn {
 		@apply text-white bg-rose-600 font-medium rounded-full text-sm 

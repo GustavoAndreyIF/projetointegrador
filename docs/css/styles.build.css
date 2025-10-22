@@ -264,8 +264,23 @@
   .bg-slate-900 {
     background-color: var(--color-slate-900);
   }
-  .bg-\[url\(\'\/docs\/images\/Placeholder\.png\'\)\] {
-    background-image: url('/docs/images/Placeholder.png');
+  .bg-\[url\(\'\.\.\/images\/life_cicle\/fifth\/0\.png\'\)\] {
+    background-image: url('../images/life_cicle/fifth/0.png');
+  }
+  .bg-\[url\(\'\.\.\/images\/life_cicle\/first\/0\.png\'\)\] {
+    background-image: url('../images/life_cicle/first/0.png');
+  }
+  .bg-\[url\(\'\.\.\/images\/life_cicle\/fourth\/0\.png\'\)\] {
+    background-image: url('../images/life_cicle/fourth/0.png');
+  }
+  .bg-\[url\(\'\.\.\/images\/life_cicle\/second\/0\.png\'\)\] {
+    background-image: url('../images/life_cicle/second/0.png');
+  }
+  .bg-\[url\(\'\.\.\/images\/life_cicle\/sixth\/0\.png\'\)\] {
+    background-image: url('../images/life_cicle/sixth/0.png');
+  }
+  .bg-\[url\(\'\.\.\/images\/life_cicle\/third\/0\.png\'\)\] {
+    background-image: url('../images/life_cicle/third/0.png');
   }
   .bg-cover {
     background-size: cover;
@@ -411,6 +426,28 @@
   }
 }
 @layer components {
+  .badge-help {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--spacing) * 3);
+    color: var(--color-slate-500);
+  }
+  .badge-help svg {
+    height: calc(var(--spacing) * 5);
+    width: calc(var(--spacing) * 5);
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  .badge-help h6 {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    font-family: "Inter", sans-serif;
+  }
   .btn {
     display: inline-flex;
     cursor: pointer;
