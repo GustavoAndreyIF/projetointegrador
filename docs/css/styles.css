@@ -31,6 +31,27 @@
 		@apply bg-[url('../images/backgrounds/background_1.jpg')] bg-cover bg-center 
 		flex flex-col gap-12;
 	}
+	.wiki-style h1 {
+		@apply text-white text-4xl font-bold mt-6 mb-4;
+		font-family: "Bebas Neue", cursive;
+	}
+	.wiki-style h2 {
+		@apply text-white text-3xl font-semibold mt-4 mb-2;
+		font-family: "Bebas Neue", cursive;
+	}
+	.wiki-style h3 {
+		@apply text-white text-2xl font-semibold mt-4 mb-2;
+		font-family: "Bebas Neue", cursive;
+	}
+	.wiki-style p {
+		@apply text-slate-300 mb-2;
+		font-family: "Inter", sans-serif;
+	}
+
+	.wiki-style li {
+		@apply flex flex-row items-center text-slate-300 list-none ml-0.5 my-2;
+		font-family: "Inter", sans-serif;
+	}
 }
 
 @layer utilities {
@@ -61,6 +82,30 @@
 }
 
 @layer components {
+	/*List Items */
+	.li-icon {
+		@apply text-rose-600 w-10 h-10 me-1 flex-shrink-0;
+	}
+
+	/* GALLERY IMAGES */
+	.gallery-container {
+		@apply grid grid-cols-2 gap-2;
+	}
+	.gallery-items {
+		@apply grid gap-2;
+	}
+	.gallery-items img {
+		@apply h-auto max-w-full rounded-lg;
+	}
+	/*WIKI IMAGES*/
+	.wiki-images {
+		@apply mb-2 align-middle justify-center items-center grid grid-cols-3 grid-rows-1 gap-1;
+	}
+	.wiki-images img {
+		@apply h-28 max-w-full rounded-lg;
+	}
+
+	/*BADGE HELP*/
 	.badge-help {
 		@apply flex flex-row text-slate-500 gap-3;
 	}
