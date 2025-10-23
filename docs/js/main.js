@@ -16,10 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	window.addEventListener("scroll", showOnScroll);
 	showOnScroll();
 
-
-    /**
-     * Scroll horizontal com clique e arraste
-     */
+	/**
+	 * Scroll horizontal com clique e arraste
+	 */
 	const container = document.querySelector(".scroll-container");
 	let isDown = false; // Indica se o mouse está pressionado
 	let startX; // Posição inicial do mouse
@@ -52,3 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 });
+
+function scrollToTop() {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}

@@ -82,6 +82,25 @@
 }
 
 @layer components {
+	/*breadcrumb*/
+	.breadcrumb {
+		@apply flex text-slate-500 mt-1;
+	}
+	.breadcrumb ol {
+		@apply inline-flex items-center space-x-1;
+	}
+	.breadcrumb li {
+		@apply inline-flex items-center;
+	}
+	.breadcrumb a {
+		@apply gap-1 inline-flex items-center;
+	}
+	.breadcrumb p {
+		@apply text-sm text-slate-500;
+	}
+	.breadcrumb svg {
+		@apply w-6 h-6;
+	}
 	/*List Items */
 	.li-icon {
 		@apply text-rose-600 w-10 h-10 me-1 flex-shrink-0;
