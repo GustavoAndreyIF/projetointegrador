@@ -82,6 +82,25 @@
 }
 
 @layer components {
+	/*SCROLL TOP BUTTON*/
+	.scroll-top-container {
+		@apply fixed end-6 bottom-6;
+	}
+	.scroll-top-container button {
+		@apply w-12 h-12 bg-rose-600 text-white rounded-full 
+			flex justify-center items-center shadow-lg 
+			transition-all duration-200 ease-in-out;
+	}
+	.scroll-top-container button:hover {
+		@apply bg-rose-700 shadow-xl scale-105;
+	}
+	.scroll-top-container svg {
+		@apply w-6 h-6;
+	}
+	/* Description*/
+	.description-container {
+		@apply text-slate-200 mb-6;
+	}
 	/*breadcrumb*/
 	.breadcrumb {
 		@apply flex text-slate-500 mt-1;

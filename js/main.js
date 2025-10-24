@@ -50,6 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			container.scrollLeft = scrollLeft - walk; // Atualiza a posição do scroll
 		});
 	}
+	/**
+	 * Esconde o botão "scroll to top" quando está no topo da página
+	 */
+	const buttonTop = document.getElementById("buttonTop");
+	const toggleButtonTop = () => {
+		if (window.scrollY > 500) {
+			buttonTop.style.display = "flex";
+		} else {
+			buttonTop.style.display = "none";
+		}
+	};
+	window.addEventListener("scroll", toggleButtonTop);
+	toggleButtonTop();
 });
 
 function scrollToTop() {

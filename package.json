@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./docs/css/styles.css -o ./docs/css/styles.build.css --watch",
+    "dev": "npx @tailwindcss/cli -i ./css/styles.css -o ./css/styles.build.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
