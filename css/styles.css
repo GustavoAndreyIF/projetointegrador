@@ -94,6 +94,9 @@
 	.scroll-top-container button:hover {
 		@apply bg-rose-700 shadow-xl scale-105;
 	}
+	.scroll-top-container button:focus {
+		@apply outline-none ring-2 ring-rose-400 ring-offset-2;
+	}
 	.scroll-top-container svg {
 		@apply w-6 h-6;
 	}
