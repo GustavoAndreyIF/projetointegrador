@@ -63,8 +63,59 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 	window.addEventListener("scroll", toggleButtonTop);
 	toggleButtonTop();
+
+	/**
+	 * Sistema de Tabs para Poiquilócitos
+	 */
+	const tabButtons = document.querySelectorAll('[role="tab"]');
+	const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+	if (tabButtons.length === 0) return;
+	// Função para mostrar uma tab específica com animação
+	const showTab = (targetId) => {
+		// Esconde todos os painéis e remove seleção de todos os botões
+		tabPanels.forEach((panel) => {
+			panel.hidden = true;
+			panel.classList.remove("opacity-100", "translate-y-0");
+			panel.classList.add("opacity-0", "translate-y-8");
+		});
+		tabButtons.forEach((button) => {
+			button.setAttribute("aria-selected", "false");
+		});
+
+		// Mostra o painel alvo e marca o botão como selecionado
+		const targetPanel = document.querySelector(targetId);
+		const targetButton = document.querySelector(`[data-tabs-target="${targetId}"]`);
+
+		if (targetPanel && targetButton) {
+			targetPanel.hidden = false;
+			targetButton.setAttribute("aria-selected", "true");
+
+			// Adiciona animação ao painel ativo
+			setTimeout(() => {
+				targetPanel.classList.remove("opacity-0", "translate-y-8");
+				targetPanel.classList.add("opacity-100", "translate-y-0");
+			}, 100); // delay porque o card demora pra aparecer
+		}
+	};
+
+	// Adiciona evento de clique em cada botão de tab, tava com preguiça de colocar na mão
+	tabButtons.forEach((button) => {
+		button.addEventListener("click", () => {
+			const targetId = button.getAttribute("data-tabs-target");
+			showTab(targetId);
+		});
+	});
+
+	// Mostra a primeira tab por padrão (já está visível no HTML, mas é bom garantir)
+	const firstTab = tabButtons[0]?.getAttribute("data-tabs-target");
+	if (firstTab) {
+		showTab(firstTab);
+	}
 });
 
 function scrollToTop() {
 	window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+document.addEventListener("DOMContentLoaded", () => {});
