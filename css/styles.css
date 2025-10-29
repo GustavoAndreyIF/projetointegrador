@@ -82,6 +82,31 @@
 }
 
 @layer components {
+	/* apoie*/
+	.apoie {
+		@apply text-center rounded-xl px-4 py-8 flex flex-col transition-all duration-300 ease-in-out;
+	}
+	.apoie h3 {
+		@apply text-white mb-4 tracking-tight text-center text-4xl font-extrabold leading-none;
+		font-family: "Inter", sans-serif;
+	}
+	.apoie p {
+		@apply text-slate-300 text-center text-base;
+		font-family: "Inter", sans-serif;
+	}
+
+	/* Jumbotron */
+	.jumbotron {
+		@apply bg-slate-900/50 text-center rounded-xl px-4 py-8 flex flex-col transition-all duration-300 ease-in-out shadow-md;
+	}
+	.jumbotron h3 {
+		@apply text-white mb-4 tracking-tight text-center text-4xl font-extrabold leading-none;
+		font-family: "Inter", sans-serif;
+	}
+	.jumbotron p {
+		@apply text-slate-300 text-center text-lg;
+		font-family: "Inter", sans-serif;
+	}
 	/* MODAL */
 	.modal {
 		@apply fixed overflow-y-auto overflow-x-hidden top-0 right-0 left-0 z-50 justify-center items-center w-full inset-0 max-h-full;

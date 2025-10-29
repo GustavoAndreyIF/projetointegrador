@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="../css/styles.build.css" />
+
+		<title>Os Hemácios Falso Forma</title>
+	</head>
+	<body>
+		<header class="section-spacing">
+			<a href="../index.html"><img src="../images/logo.svg" class="logo" /></a>
+			<nav>
+				<a href="../index.html" class="btn-nav">Inicio</a>
+				<a href="wiki.html" class="btn-nav">Artigo</a>
+				<a href="gallery.html" class="btn-nav">Galeria</a>
+				<a href="#apoie" class="btn">Apoie 💖</a>
+			</nav>
+		</header>
+		<main>
+			<section class="section-spacing">
+				<div class="apoie">
+					<h3>Apoie o nosso projeto 💖</h3>
+					<p>
+						Este projeto nasceu da colaboração entre nosso grupo integrador
+						e a matéria de Biologia, e será apresentado no evento de
+						biomaquete. Cada etapa foi feita com muita dedicação,
+						criatividade e também superando desafios financeiros. Se quiser
+						apoiar de forma simbólica e ajudar a cobrir parte dos custos,
+						qualquer valor será muito bem-vindo! Sua contribuição não é
+						obrigatória, mas faz toda a diferença para quem acredita na
+						educação, na ciência e no poder da colaboração. Obrigado por
+						acompanhar, apoiar e fazer parte dessa jornada!
+					</p>
+				</div>
+				<h3
+					class="text-white mb-4 tracking-tight text-center text-2xl font-extrabold leading-none"
+				>
+					Ajude com PIX!
+				</h3>
+				<div class="flex justify-center align-center mt-6">
+					<div class="relative w-full max-w-xs">
+						<input
+							id="pix"
+							type="text"
+							class="bg-slate-700 border border-slate-600 text-slate-300 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-slate-500"
+							value="pix:123456789"
+							disabled
+							readonly
+						/>
+						<button
+							id="copy-btn"
+							class="absolute end-2 top-1/2 -translate-y-1/2 text-slate-400 hover:bg-slate-600 rounded-lg p-2 inline-flex items-center justify-center transition-all duration-200"
+							title="Copiar chave PIX"
+						>
+							<svg
+								id="copy-icon"
+								class="w-4 h-4"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="currentColor"
+								viewBox="0 0 18 20"
+							>
+								<path
+									d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"
+								/>
+							</svg>
+							<svg
+								id="check-icon"
+								class="w-4 h-4 text-rose-500 hidden"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 16 12"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M1 5.917 5.724 10.5 15 1.5"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="section-spacing rounded-xl">
+			<div class="p-4 w-full">
+				<a
+					href="../index.html"
+					class="whitespace-nowrap text-xl font-bold text-white flex flex-row items-center mb-4"
+					><img src="../images/logo.svg" class="logo" />Os Hemácios Falso
+					Forma</a
+				>
+				<ul class="flex flex-row justify-center gap-8 mb-4">
+					<li><a href="../index.html" class="btn-nav">Inicio</a></li>
+					<li><a href="wiki.html" class="btn-nav">Artigo</a></li>
+					<li>
+						<a href="gallery.html" class="btn-nav">Galeria</a>
+					</li>
+					<li>
+						<a href="about.html" class="btn-nav">Sobre nós</a>
+					</li>
+				</ul>
+				<hr class="my-6 border-slate-500" />
+				<span class="text-slate-200 text-center"
+					>© 2025 Projeto Integrador.</span
+				>
+			</div>
+		</footer>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const copyBtn = document.getElementById("copy-btn");
+				const pixInput = document.getElementById("pix");
+				const copyIcon = document.getElementById("copy-icon");
+				const checkIcon = document.getElementById("check-icon");
+
+				if (copyBtn) {
+					copyBtn.addEventListener("click", () => {
+						// Copia o valor para a clipboard
+						navigator.clipboard
+							.writeText(pixInput.value)
+							.then(() => {
+								// Esconde o ícone de copy
+								copyIcon.classList.add("hidden");
+								checkIcon.classList.remove("hidden");
+
+								// Volta ao estado original após 5 segundos
+								setTimeout(() => {
+									copyIcon.classList.remove("hidden");
+									checkIcon.classList.add("hidden");
+								}, 5000);
+							})
+							.catch((err) => {
+								console.error("Erro ao copiar:", err);
+							});
+					});
+				}
+			});
+		</script>
+	</body>
+</html>
