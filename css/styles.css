@@ -84,22 +84,41 @@
 @layer components {
 	/* MODAL */
 	.modal {
-		@apply relative p-4 w-full max-w-2xl max-h-full;
+		@apply fixed overflow-y-auto overflow-x-hidden top-0 right-0 left-0 z-50 justify-center items-center w-full inset-0 max-h-full;
+	}
+	.modal-overlay {
+		@apply fixed inset-0 bg-slate-950/80 z-40;
+	}
+	.modal-main {
+		@apply relative z-50 p-4 w-full max-w-2xl max-h-full;
 	}
 	.modal-content {
-		@apply relative rounded-lg shadow-lg bg-slate-800;
+		@apply relative rounded-lg shadow-lg bg-slate-900;
 	}
 	.modal-header {
-		@apply flex items-center justify-between p-4 border-b rounded-t border-slate-700;
+		@apply flex items-center justify-between p-4 border-b border-slate-700 rounded-t;
+	}
+	.modal-header h3 {
+		@apply text-xl font-semibold text-white;
+		font-family: "Inter", sans-serif;
 	}
 	.modal-header button {
-		@apply text-slate-500 bg-transparent w-6 h-6 text-sm ms-auto inline-flex justify-center item-center;
+		@apply text-slate-500 bg-transparent w-8 h-8 text-sm ms-auto inline-flex justify-center items-center;
+	}
+	.modal-header button:hover {
+		@apply bg-slate-700 text-white rounded-lg;
+	}
+	.modal-header svg {
+		@apply w-6 h-6;
 	}
 	.modal-body {
 		@apply p-4 space-y-4;
 	}
+	.modal-body p {
+		@apply text-base leading-relaxed text-slate-300;
+	}
 	.modal-footer {
-		@apply flex items-center p-4 border-t rounded-b border-slate-700;
+		@apply flex items-center gap-4 p-4 border-t rounded-b border-slate-700;
 	}
 	/* TABS */
 	.tabs {
@@ -201,8 +220,8 @@
 
 	/* BOTÕES */
 	.btn {
-		@apply text-white bg-rose-600 font-medium rounded-full text-sm 
-			px-5 py-2 text-center inline-flex items-center shadow-md justify-between
+		@apply text-white bg-rose-600 border-2 border-rose-600 font-medium rounded-full text-sm px-5 py-2 text-center 
+			inline-flex items-center shadow-md justify-between
 			transition-all duration-200 ease-in-out cursor-pointer;
 		font-family: "Inter", sans-serif;
 	}
@@ -213,7 +232,7 @@
 		@apply outline-none ring-1 ring-rose-400 ring-offset-1;
 	}
 	.btn:hover {
-		@apply bg-rose-700 shadow-lg scale-105;
+		@apply bg-rose-700 shadow-lg scale-105 border-rose-700;
 	}
 	.btn:disabled {
 		@apply opacity-50 cursor-not-allowed;

@@ -112,10 +112,53 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (firstTab) {
 		showTab(firstTab);
 	}
+
+	/**
+	 * Sistema de Modais para Scroll Cards
+	 */
+	const openModal = (modalId) => {
+		const modal = document.getElementById(modalId);
+		if (modal) {
+			modal.classList.remove("hidden");
+			modal.classList.add("flex");
+		}
+	};
+
+	const closeModal = (modalId) => {
+		const modal = document.getElementById(modalId);
+		if (modal) {
+			modal.classList.add("hidden");
+			modal.classList.remove("flex");
+		}
+	};
+
+	// Adiciona evento de clique para abrir o modal
+	document.querySelectorAll("[data-modal]").forEach((button) => {
+		button.addEventListener("click", () => {
+			const modalId = button.getAttribute("data-modal");
+			openModal(modalId);
+		});
+	});
+
+	// Adiciona evento de clique para fechar o modal
+	document.querySelectorAll("[data-modal-hide]").forEach((button) => {
+		button.addEventListener("click", () => {
+			const modalId = button.getAttribute("data-modal-hide");
+			closeModal(modalId);
+		});
+	});
+
+	// Fecha o modal ao clicar fora do conteúdo (no background)
+	document.querySelectorAll(".modal").forEach((modal) => {
+		modal.addEventListener("click", (e) => {
+			if (e.target === modal) {
+				const modalId = modal.id;
+				closeModal(modalId);
+			}
+		});
+	});
 });
 
 function scrollToTop() {
 	window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
-document.addEventListener("DOMContentLoaded", () => {});
