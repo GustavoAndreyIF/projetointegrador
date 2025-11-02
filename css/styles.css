@@ -352,7 +352,7 @@
 	}
 
 	.card-2 img {
-		@apply h-64 w-full rounded-t-xl object-cover;
+		@apply aspect-4/3 h-64 w-full rounded-t-xl object-cover;
 	}
 	.card-2 video {
 		@apply aspect-video rounded-t-xl object-cover cursor-pointer;
@@ -366,7 +366,7 @@
 		cursor: grabbing;
 	}
 	.scroll-card {
-		@apply relative flex flex-col items-center justify-end h-64 w-64 rounded-xl object-cover flex-shrink-0 transition-all duration-300 ease-in-out;
+		@apply relative flex flex-col items-center justify-end h-64 w-64 rounded-xl object-fill aspect-square flex-shrink-0 transition-all duration-300 ease-in-out;
 	}
 	.scroll-card h5 {
 		@apply text-white shadow-md text-center pb-6 text-2xl font-semibold leading-snug;
@@ -388,7 +388,7 @@
 	}
 
 	.btn-scroll-card button {
-		@apply w-10 h-10 p-1 bg-rose-600 text-white rounded-lg 
+		@apply w-12 h-12 p-1 bg-rose-600 text-white rounded-lg 
     flex justify-center items-center shadow-lg 
     transition-all duration-200 ease-in-out cursor-pointer;
 	}
@@ -398,6 +398,6 @@
 	}
 
 	.btn-scroll-card svg {
-		@apply w-6 h-6;
+		@apply w-8 h-8;
 	}
 }

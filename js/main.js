@@ -157,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
+
 });
 
 function scrollToTop() {

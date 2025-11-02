@@ -26,17 +26,43 @@
 		</header>
 		<main>
 			<section class="section-spacing">
+				<h2 class="section-title">Sobre nós</h2>
+				<p class="text-center">
+					Este projeto foi desenvolvido para a disciplina Projeto Integrador,
+					sob orientação do professor
+					<span class="text-rose-600"><b>Alvaro Hermano da Silva</b></span
+					>, em colaboração com o projeto biomaket da disciplina de Biologia,
+					coordenado pela professora
+					<span class="text-rose-600"><b>Andrea Pereira da Silva</b></span
+					>, ambos do
+					<span class="text-rose-600"
+						><b>Instituto Federal do Rio Grande do Norte (IFRN)</b></span
+					>, campus Parnamirim. Com o tema
+					<span class="text-rose-600"><b>“Hemácias e suas funções”</b></span
+					>, o trabalho foi realizado por
+					<span class="text-rose-600"><b>Arthur Alves Tavares</b></span
+					>, <span class="text-rose-600"><b>Gustavo Andrey Diolindo</b></span
+					>, <span class="text-rose-600"><b>Jonatas Arante Lima</b></span> e
+					<span class="text-rose-600"><b>Leonardo Furtado Kauffmann</b></span
+					>, que atuaram juntos na <b>pesquisa</b>,
+					<b>desenvolvimento do site</b>, <b>construção da biomaket</b> e
+					<b>apresentação do projeto</b>.
+				</p>
+			</section>
+			<section class="section-spacing">
 				<div class="apoie" id="apoie">
 					<h3>Apoie o nosso projeto 💖</h3>
 					<p>
 						Este projeto nasceu da colaboração entre nosso grupo integrador
 						e a matéria de Biologia, e será apresentado no evento de
-						biomaquete. Cada etapa foi feita com muita dedicação,
-						criatividade e também superando desafios financeiros. Se quiser
-						apoiar de forma simbólica e ajudar a cobrir parte dos custos,
-						qualquer valor será muito bem-vindo! Sua contribuição não é
-						obrigatória, mas faz toda a diferença para quem acredita na
-						educação, na ciência e no poder da colaboração. Obrigado por
+						<span class="text-rose-600"><b>biomaket</b></span
+						>. Cada etapa foi feita com muita <b>dedicação</b>,
+						<b>criatividade</b> e também superando
+						<b>desafios financeiros</b>. Se quiser apoiar de forma simbólica
+						e ajudar a cobrir parte dos custos, qualquer valor será muito
+						bem-vindo! Sua contribuição não é obrigatória, mas faz toda a
+						diferença para quem acredita na <b>educação</b>, na
+						<b>ciência</b> e no poder da <b>colaboração</b>. Obrigado por
 						acompanhar, apoiar e fazer parte dessa jornada!
 					</p>
 				</div>
@@ -50,9 +76,8 @@
 						<input
 							id="pix"
 							type="text"
-							class="bg-slate-700 border border-slate-600 text-slate-300 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-slate-500"
+							class="bg-slate-700 border border-slate-600 text-slate-300 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 placeholder-slate-500 cursor-default"
 							value="4c9eb2a4-c033-41b7-862e-5ed16bf7fb9e"
-							disabled
 							readonly
 						/>
 						<button
@@ -62,28 +87,26 @@
 						>
 							<svg
 								id="copy-icon"
-								class="w-4 h-4"
+								class="w-6 h-6"
 								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 -960 960 960"
 								fill="currentColor"
-								viewBox="0 0 18 20"
 							>
 								<path
-									d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"
+									d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"
 								/>
 							</svg>
 							<svg
 								id="check-icon"
-								class="w-4 h-4 text-rose-500 hidden"
+								class="w-6 h-6 text-rose-500 hidden"
 								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 16 12"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="currentColor"
 							>
 								<path
-									stroke="currentColor"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M1 5.917 5.724 10.5 15 1.5"
+									d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"
 								/>
 							</svg>
 						</button>
@@ -106,7 +129,7 @@
 						<a href="gallery.html" class="btn-nav">Galeria</a>
 					</li>
 					<li>
-						<a href="about.html" class="btn-nav">Sobre nós</a>
+						<a href="apoie.html" class="btn-nav">Sobre nós</a>
 					</li>
 				</ul>
 				<hr class="my-6 border-slate-500" />
@@ -122,25 +145,52 @@
 				const copyIcon = document.getElementById("copy-icon");
 				const checkIcon = document.getElementById("check-icon");
 
-				if (copyBtn) {
-					copyBtn.addEventListener("click", () => {
-						// Copia o valor para a clipboard
-						navigator.clipboard
-							.writeText(pixInput.value)
-							.then(() => {
-								// Esconde o ícone de copy
+				if (copyBtn && pixInput && copyIcon && checkIcon) {
+					copyBtn.addEventListener("click", async () => {
+						const pixValue = pixInput.value;
+
+						try {
+							// api moderna de clipboard
+							await navigator.clipboard.writeText(pixValue);
+
+							// Mostra feedback de sucesso
+							copyIcon.classList.add("hidden");
+							checkIcon.classList.remove("hidden");
+
+							// Volta ao normal após53 segundos
+							setTimeout(() => {
+								copyIcon.classList.remove("hidden");
+								checkIcon.classList.add("hidden");
+							}, 5000);
+						} catch (err) {
+							console.error("Erro ao copiar:", err);
+							// gambiarra porque nem todo navegador suporta a API Clipboard
+							const textArea = document.createElement("textarea");
+							textArea.value = pixValue;
+							textArea.style.position = "fixed";
+							textArea.style.left = "-999999px";
+							textArea.style.top = "-999999px";
+							document.body.appendChild(textArea);
+							textArea.focus();
+							textArea.select();
+
+							try {
+								document.execCommand("copy");
+								textArea.remove();
+
+								// Mostra feedback de sucesso
 								copyIcon.classList.add("hidden");
 								checkIcon.classList.remove("hidden");
 
-								// Volta ao estado original após 5 segundos
 								setTimeout(() => {
 									copyIcon.classList.remove("hidden");
 									checkIcon.classList.add("hidden");
-								}, 5000);
-							})
-							.catch((err) => {
-								console.error("Erro ao copiar:", err);
-							});
+								}, 3000);
+							} catch (err2) {
+								console.error("Fallback também falhou:", err2);
+								textArea.remove();
+							}
+						}
 					});
 				}
 			});

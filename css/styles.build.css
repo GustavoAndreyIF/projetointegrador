@@ -209,11 +209,17 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
   .end-2 {
     inset-inline-end: calc(var(--spacing) * 2);
+  }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
   }
   .top-1\/2 {
     top: calc(1/2 * 100%);
@@ -239,8 +245,17 @@
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
@@ -254,20 +269,42 @@
   .hidden {
     display: none;
   }
+  .inline-block {
+    display: inline-block;
+  }
   .inline-flex {
     display: inline-flex;
+  }
+  .table {
+    display: table;
   }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
   }
   .w-full {
     width: 100%;
   }
   .max-w-xs {
     max-width: var(--container-xs);
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
@@ -281,14 +318,26 @@
     --tw-translate-y: calc(var(--spacing) * 8);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .cursor-default {
+    cursor: default;
+  }
   .cursor-grabbing {
     cursor: grabbing;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
   }
   .flex-row {
     flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -429,6 +478,9 @@
   .bg-center {
     background-position: center;
   }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -499,6 +551,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .placeholder-slate-500 {
     &::placeholder {
       color: var(--color-slate-500);
@@ -509,6 +564,10 @@
   }
   .opacity-100 {
     opacity: 100%;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -1346,6 +1405,7 @@
     gap: calc(var(--spacing) * 4);
   }
   .card-2 img {
+    aspect-ratio: 4/3;
     height: calc(var(--spacing) * 64);
     width: 100%;
     border-top-left-radius: var(--radius-xl);
@@ -1378,6 +1438,7 @@
   .scroll-card {
     position: relative;
     display: flex;
+    aspect-ratio: 1 / 1;
     height: calc(var(--spacing) * 64);
     width: calc(var(--spacing) * 64);
     flex-shrink: 0;
@@ -1385,7 +1446,7 @@
     align-items: center;
     justify-content: flex-end;
     border-radius: var(--radius-xl);
-    object-fit: cover;
+    object-fit: fill;
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
@@ -1440,8 +1501,8 @@
   }
   .btn-scroll-card button {
     display: flex;
-    height: calc(var(--spacing) * 10);
-    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 12);
+    width: calc(var(--spacing) * 12);
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -1469,8 +1530,8 @@
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .btn-scroll-card svg {
-    height: calc(var(--spacing) * 6);
-    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 8);
+    width: calc(var(--spacing) * 8);
   }
 }
 @property --tw-translate-x {
@@ -1504,6 +1565,11 @@
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -1664,6 +1730,7 @@
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;
