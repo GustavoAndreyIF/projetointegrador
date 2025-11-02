@@ -518,6 +518,19 @@
 				</section>
 			</div>
 		</main>
+		<div class="scroll-top-container">
+			<button id="buttonTop" onclick="scrollToTop()">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 -960 960 960"
+					fill="currentColor"
+				>
+					<path
+						d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+					/>
+				</svg>
+			</button>
+		</div>
 		<footer class="section-spacing rounded-xl">
 			<div class="p-4 w-full">
 				<a
@@ -542,5 +555,22 @@
 				>
 			</div>
 		</footer>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const buttonTop = document.getElementById("buttonTop");
+				const toggleButtonTop = () => {
+					if (window.scrollY > 500) {
+						buttonTop.style.display = "flex";
+					} else {
+						buttonTop.style.display = "none";
+					}
+				};
+				window.addEventListener("scroll", toggleButtonTop);
+				toggleButtonTop();
+			});
+			function scrollToTop() {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			}
+		</script>
 	</body>
 </html>
